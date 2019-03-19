@@ -57,6 +57,7 @@ QT_BEGIN_NAMESPACE
 class QLineEdit;
 class QPushButton;
 class QTextEdit;
+class QCheckBox;
 QT_END_NAMESPACE
 
 //! [0]
@@ -69,6 +70,8 @@ public:
 
 private slots:
     void on_findButton_clicked();
+    void on_myNewButton_clicked();
+    void on_onOffCheckBox_clicked();
 
 private:
     QPushButton *ui_findButton;

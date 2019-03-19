@@ -90,6 +90,7 @@ TextFinder::TextFinder(QWidget *parent)
     ui_findButton = findChild<QPushButton*>("findButton");
     ui_textEdit = findChild<QTextEdit*>("textEdit");
     ui_lineEdit = findChild<QLineEdit*>("lineEdit");
+
 //! [0] //! [1]
 
 //! [2]
@@ -159,4 +160,19 @@ void TextFinder::on_findButton_clicked()
         }
     }
 }
+
+
+void TextFinder::on_myNewButton_clicked()
+{
+    QMessageBox::information(this, tr("My New Button"), tr("You pushed the button!"));
+}
+
+void TextFinder::on_onOffCheckBox_clicked()
+{
+    QMessageBox::information(this, tr("On Off Check Box"), tr("You checked the box!"));
+}
+
+
+
+
 //! [8] //! [9]
