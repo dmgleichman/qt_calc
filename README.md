@@ -6,4 +6,5 @@ Test programs using QT5
 
 calculator
 
+textfinder
 
