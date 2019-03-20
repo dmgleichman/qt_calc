@@ -12,10 +12,16 @@ styles
 
 calendar
 
+spinboxes
+
 ## Widget Gallery
 
-From the docs:
+Interesting pages from the docs:
+
 [Widgets Gallery](https://doc.qt.io/qt-5/gallery.html)
 
-Added the styles and calendar widgets examples
+[Qt Widgets Examples](https://doc.qt.io/qt-5/examples-widgets.html)
+
+[Widgets Classes](https://doc.qt.io/qt-5/widget-classes.html)
+
 
