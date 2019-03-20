@@ -14,6 +14,8 @@ calendar
 
 spinboxes
 
+digitalclock
+
 ## Widget Gallery
 
 Interesting pages from the docs:
