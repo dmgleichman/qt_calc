@@ -18,6 +18,10 @@ digitalclock
 
 get_started_widgets_tutorial
 
+weatherstation
+
+weatherballoon
+
 ## Widget Gallery
 
 Interesting pages from the docs:
@@ -33,5 +37,12 @@ Interesting pages from the docs:
 Started working with this tutorial:
 
 [Widgets Tutorial](https://doc.qt.io/qt-5/qtwidgets-tutorials-notepad-example.html)
+
+## Qt5 Book Code
+
+Found lots of great examples at:
+[Qt5-book-code](https://github.com/mutse/qt5-book-code)
+
+First added is weatherballoon and weatherstation which use UDP to communicate.
 
 
