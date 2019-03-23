@@ -22,6 +22,9 @@ weatherstation
 
 weatherballoon
 
+converter
+
+
 ## Widget Gallery
 
 Interesting pages from the docs:
@@ -45,4 +48,7 @@ Found lots of great examples at:
 
 First added is weatherballoon and weatherstation which use UDP to communicate.
 
+## Converter
+
+Finally made my own program: a fahrenheit to celcius converter!
 

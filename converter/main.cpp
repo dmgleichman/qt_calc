@@ -3,9 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    TemperatureConverter w;
-    w.show();
+    QApplication app(argc, argv);
+    TemperatureConverter tempConvert;
+    tempConvert.show();
 
-    return a.exec();
+    return app.exec();
 }
+
