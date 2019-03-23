@@ -31,8 +31,7 @@ SOURCES += \
 HEADERS += \
         temperatureconverter.h
 
-FORMS += \
-        temperatureconverter.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
