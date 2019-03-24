@@ -56,6 +56,12 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     DigitalClock clock;
+    DigitalClock clock2;
+
+    printf("Digital Clock\n");
+    fflush(stdout);
+
     clock.show();
+    clock2.show();
     return app.exec();
 }
