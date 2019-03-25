@@ -24,6 +24,7 @@ weatherballoon
 
 converter
 
+jumbletron
 
 ## Widget Gallery
 
@@ -51,4 +52,8 @@ First added is weatherballoon and weatherstation which use UDP to communicate.
 ## Converter
 
 Finally made my own program: a fahrenheit to celcius converter!
+
+## JumbleTron
+
+A big jumble of everything for test. It's Ragu! It's in there!
 
