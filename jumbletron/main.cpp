@@ -1,11 +1,15 @@
-#include "jumbletronwindow.h"
+#include "temperatureconverter.h"
+
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    JumbleTronWindow w;
-    w.show();
+
+    TemperatureConverter tempConverter;
+
+    tempConverter.show();
+
 
     return a.exec();
 }
