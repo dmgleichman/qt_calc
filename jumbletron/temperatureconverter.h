@@ -8,6 +8,7 @@ QT_BEGIN_NAMESPACE
 class QLineEdit;
 class QPushButton;
 class QLabel;
+class QDoubleSpinBox;
 QT_END_NAMESPACE
 
 
@@ -19,9 +20,10 @@ public:
     TemperatureConverter(QWidget *parent = nullptr);
 
 private slots:
-    void convertButtonClicked();
+    void performConversion();
     void openJumbleButtonClicked();
     void quitButtonClicked();
+    void fahrenheitChanged(double fahr);
 
 private:
     double fahrenheit;
@@ -30,7 +32,7 @@ private:
     QLabel *fahrenheitLabel;
     QLabel *celciusLabel;
 
-    QLineEdit *fahrenheitLineEdit;
+    QDoubleSpinBox *fahrenheitDoubleSpinBox;
     QLineEdit *celciusLineEdit;
 
     QPushButton *convertButton;
