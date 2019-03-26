@@ -24,6 +24,7 @@ private slots:
     void openJumbleButtonClicked();
     void quitButtonClicked();
     void fahrenheitChanged(double fahr);
+    void openLogWindowButtonClicked();
 
 private:
     double fahrenheit;
@@ -38,6 +39,8 @@ private:
     QPushButton *convertButton;
 
     QPushButton *openJumbleButton;
+
+    QPushButton *openLogWindowButton;
 
     QPushButton *quitButton;
 

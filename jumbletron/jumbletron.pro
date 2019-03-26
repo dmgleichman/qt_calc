@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         jumbletronwindow.cpp \
-    temperatureconverter.cpp
+    temperatureconverter.cpp \
+    logwindow.cpp
 
 HEADERS += \
         jumbletronwindow.h \
-    temperatureconverter.h
+    temperatureconverter.h \
+    logwindow.h
 
 FORMS += \
         jumbletronwindow.ui
