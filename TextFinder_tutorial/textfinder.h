@@ -18,6 +18,10 @@ public:
 private slots:
     void on_findButton_clicked();
 
+    void on_toolAButton_clicked();
+
+    void on_toolBButton_clicked();
+
 private:
     Ui::TextFinder *ui;
     void loadTextFile();

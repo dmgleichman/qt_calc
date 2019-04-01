@@ -36,3 +36,13 @@ void TextFinder::loadTextFile()
     QTextCursor cursor = ui->textEdit->textCursor();
     cursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor, 1);
 }
+
+void TextFinder::on_toolAButton_clicked()
+{
+
+}
+
+void TextFinder::on_toolBButton_clicked()
+{
+
+}
