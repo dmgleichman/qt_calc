@@ -153,6 +153,13 @@ void MainWindow::about()
 }
 //! [14]
 
+
+// Dougs about
+void MainWindow::aboutDoug()
+{
+    QMessageBox::about(this, tr("About Doug"), tr("Doug is a great guy"));
+}
+
 //! [15]
 void MainWindow::documentWasModified()
 //! [15] //! [16]
@@ -249,6 +256,9 @@ void MainWindow::createActions()
     QMenu *helpMenu = menuBar()->addMenu(tr("&Help"));
     QAction *aboutAct = helpMenu->addAction(tr("&About"), this, &MainWindow::about);
     aboutAct->setStatusTip(tr("Show the application's About box"));
+
+    QAction *aboutDougAct = helpMenu->addAction(tr("&Doug's Information"), this, &MainWindow::aboutDoug);
+    aboutDougAct->setStatusTip(tr("Show information about Doug"));
 
 //! [22]
 
