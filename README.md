@@ -47,6 +47,11 @@ Started working with this tutorial:
 Found lots of great examples at:
 [Qt5-book-code](https://github.com/mutse/qt5-book-code)
 
+This code is from the book:
+C++ GUI Porgramming with Qt4 by Jasmin Blanchette and Mark Summerfield
+
+The source code has been modified from Qt4 to Qt5 with only a few small changes.
+
 First added is weatherballoon and weatherstation which use UDP to communicate.
 
 ## Converter
@@ -57,3 +62,15 @@ Finally made my own program: a fahrenheit to celcius converter!
 
 A big jumble of everything for test. It's Ragu! It's in there!
 
+## Qt Examples of Charts
+
+linechart
+
+zoomlinechart
+
+## Spreadsheet Example from Qt Book
+
+spreadsheet
+
+This example is from chapter 3 of the Blanchette and Summerfield book.
+Chapter 3 covers all the major GUI components: MainWindow, menus, toolbars, status bar, storing settings, multiple documents and splash screens.
