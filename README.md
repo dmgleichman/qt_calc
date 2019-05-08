@@ -48,7 +48,7 @@ Found lots of great examples at:
 [Qt5-book-code](https://github.com/mutse/qt5-book-code)
 
 This code is from the book:
-C++ GUI Porgramming with Qt4 by Jasmin Blanchette and Mark Summerfield
+C++ GUI Programming with Qt4 by Jasmin Blanchette and Mark Summerfield
 
 The source code has been modified from Qt4 to Qt5 with only a few small changes.
 
