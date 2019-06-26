@@ -1,15 +1,18 @@
-#include "temperatureconverter.h"
+// main.cpp
+// start top window app
 
 #include <QApplication>
+
+#include "top.h"
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    TemperatureConverter tempConverter;
+    TopWindow top;
 
-    tempConverter.show();
-
+    top.show();
 
     return a.exec();
 }

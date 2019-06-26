@@ -28,15 +28,17 @@ SOURCES += \
         main.cpp \
         jumbletronwindow.cpp \
     temperatureconverter.cpp \
-    logwindow.cpp
+    logwindow.cpp \
+    top.cpp
 
 HEADERS += \
         jumbletronwindow.h \
     temperatureconverter.h \
-    logwindow.h
+    logwindow.h \
+    top.h
 
 FORMS += \
-        jumbletronwindow.ui
+    jumbletronwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

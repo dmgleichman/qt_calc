@@ -21,10 +21,7 @@ public:
 
 private slots:
     void performConversion();
-    void openJumbleButtonClicked();
-    void quitButtonClicked();
     void fahrenheitChanged(double fahr);
-    void openLogWindowButtonClicked();
 
 private:
     double fahrenheit;
@@ -37,12 +34,6 @@ private:
     QLineEdit *celciusLineEdit;
 
     QPushButton *convertButton;
-
-    QPushButton *openJumbleButton;
-
-    QPushButton *openLogWindowButton;
-
-    QPushButton *quitButton;
 
 };
 

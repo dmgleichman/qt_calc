@@ -1,3 +1,6 @@
+// temperatureconverter.cpp
+// convert fahrenheit to celcius
+
 #include <QtWidgets>
 
 #include "temperatureconverter.h"
@@ -18,19 +21,10 @@ TemperatureConverter::TemperatureConverter(QWidget *parent)
     celciusLineEdit = new QLineEdit;
 
     convertButton = new QPushButton("Convert");
-    openJumbleButton = new QPushButton("Open Jumble");
-    openLogWindowButton = new QPushButton("Open Log Window");
-    quitButton = new QPushButton("Quit");
 
     connect(convertButton, SIGNAL(clicked()), this, SLOT(performConversion()));
 
     connect(fahrenheitDoubleSpinBox, SIGNAL(valueChanged(double)), this, SLOT(fahrenheitChanged(double)));
-
-    connect(openJumbleButton, SIGNAL(clicked()), this, SLOT(openJumbleButtonClicked()));
-
-    connect(openLogWindowButton, SIGNAL(clicked()), this, SLOT(openLogWindowButtonClicked()));
-
-    connect(quitButton, SIGNAL(clicked()), this, SLOT(quitButtonClicked()));
 
     celciusLineEdit->setReadOnly(true);
     fahrenheitDoubleSpinBox->setRange(-1000000, 10000000);
@@ -41,9 +35,6 @@ TemperatureConverter::TemperatureConverter(QWidget *parent)
     mainLayout->addWidget(celciusLabel, 1, 0);
     mainLayout->addWidget(celciusLineEdit, 1, 1);
     mainLayout->addWidget(convertButton, 2, 0, 1, 2);
-    mainLayout->addWidget(openJumbleButton, 3, 0, 1, 2);
-    mainLayout->addWidget(openLogWindowButton, 4, 0, 1, 2);
-    mainLayout->addWidget(quitButton, 5, 0, 1, 2);
     setLayout(mainLayout);
 
     fahrenheitDoubleSpinBox->setValue(fahrenheit);
@@ -70,25 +61,4 @@ void TemperatureConverter::fahrenheitChanged(double a)
 }
 
 
- void TemperatureConverter::openJumbleButtonClicked()
- {
-     QWidget *jumbleTron = new JumbleTronWindow;
-     jumbleTron->show();
- }
 
- void TemperatureConverter::openLogWindowButtonClicked()
- {
-     QWidget *logWindowWindow = new LogWindow();
-     logWindowWindow->show();
- }
-
- void TemperatureConverter::quitButtonClicked()
- {
-
-     int result = QMessageBox::question(this, "Quit", "Do you want to quit the program?");
-
-     if (result == QMessageBox::Yes)
-     {
-        exit(0);
-     }
- }
