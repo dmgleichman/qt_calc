@@ -12,10 +12,15 @@ TopWindow::TopWindow(QWidget *parent)
     : QWidget(parent)
 {
 
+    actionsLabel = new QLabel("Actions:");
+
     openTemperatureConverterButton = new QPushButton("Temperature Converter");
     openJumbleButton = new QPushButton("Open Jumble");
     openLogWindowButton = new QPushButton("Open Log Window");
     quitButton = new QPushButton("Quit");
+
+    statusLabel = new QLabel("Status:");
+    topStatusWindow = new QPlainTextEdit;
 
     connect(openTemperatureConverterButton, SIGNAL(clicked()), this, SLOT(openTemperatureConverterClicked()));
 
@@ -26,10 +31,15 @@ TopWindow::TopWindow(QWidget *parent)
     connect(quitButton, SIGNAL(clicked()), this, SLOT(quitButtonClicked()));
 
     QGridLayout *mainLayout = new QGridLayout;
-    mainLayout->addWidget(openTemperatureConverterButton, 3, 0, 1, 2);
-    mainLayout->addWidget(openJumbleButton, 4, 0, 1, 2);
-    mainLayout->addWidget(openLogWindowButton, 5, 0, 1, 2);
-    mainLayout->addWidget(quitButton, 6, 0, 1, 2);
+    mainLayout->addWidget(actionsLabel, 1, 0, 1, 5);
+    mainLayout->addWidget(openTemperatureConverterButton, 2, 0, 1, 5);
+    mainLayout->addWidget(openJumbleButton, 3, 0, 1, 5);
+    mainLayout->addWidget(openLogWindowButton, 4, 0, 1, 5);
+    mainLayout->addWidget(quitButton, 10, 0, 1, 5);
+
+    mainLayout->addWidget(statusLabel, 1, 10, 1, 1);
+    mainLayout->addWidget(topStatusWindow, 2, 10, 10, 200);
+
     setLayout(mainLayout);
 
     setWindowTitle("Top of the Jumble");
@@ -37,6 +47,8 @@ TopWindow::TopWindow(QWidget *parent)
 
 void TopWindow::openTemperatureConverterClicked()
 {
+    topStatusWindow->appendPlainText("Opening temperature converter window");
+
     QWidget *tempConverter = new TemperatureConverter;
 
     tempConverter->show();
@@ -44,23 +56,35 @@ void TopWindow::openTemperatureConverterClicked()
 
 void TopWindow::openJumbleButtonClicked()
 {
+    topStatusWindow->appendPlainText("Opening the JumbleTron Window");
+
     QWidget *jumbleTron = new JumbleTronWindow;
+
     jumbleTron->show();
 }
 
 void TopWindow::openLogWindowButtonClicked()
 {
+    topStatusWindow->appendPlainText("Opening the Log Window");
+
     QWidget *logWindowWindow = new LogWindow();
+
     logWindowWindow->show();
 }
 
 void TopWindow::quitButtonClicked()
 {
 
+    topStatusWindow->appendPlainText("User pressed quit button");
+
     int result = QMessageBox::question(this, "Quit", "Do you want to quit the program?");
 
     if (result == QMessageBox::Yes)
     {
        exit(0);
+    }
+    else
+    {
+        topStatusWindow->appendPlainText("User does not want to quit");
     }
 }

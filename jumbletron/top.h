@@ -10,6 +10,7 @@
 QT_BEGIN_NAMESPACE
 class QPushButton;
 class QLabel;
+class QPlainTextEdit;
 QT_END_NAMESPACE
 
 
@@ -28,6 +29,8 @@ private slots:
 
 private:
 
+    QLabel * actionsLabel;
+
     QPushButton *openTemperatureConverterButton;
 
     QPushButton *openJumbleButton;
@@ -35,6 +38,10 @@ private:
     QPushButton *openLogWindowButton;
 
     QPushButton *quitButton;
+
+    QLabel * statusLabel;
+
+    QPlainTextEdit *topStatusWindow;
 
 };
 
