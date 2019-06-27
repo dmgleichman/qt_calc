@@ -38,7 +38,7 @@ TopWindow::TopWindow(QWidget *parent)
     mainLayout->addWidget(quitButton, 10, 0, 1, 5);
 
     mainLayout->addWidget(statusLabel, 1, 10, 1, 1);
-    mainLayout->addWidget(topStatusWindow, 2, 10, 10, 200);
+    mainLayout->addWidget(topStatusWindow, 2, 10, 10, 50);
 
     setLayout(mainLayout);
 
