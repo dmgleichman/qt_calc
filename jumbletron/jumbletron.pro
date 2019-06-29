@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,6 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    chart_display.cpp \
         main.cpp \
         jumbletronwindow.cpp \
     temperatureconverter.cpp \
@@ -32,6 +34,7 @@ SOURCES += \
     top.cpp
 
 HEADERS += \
+    chart_display.h \
         jumbletronwindow.h \
     temperatureconverter.h \
     logwindow.h \

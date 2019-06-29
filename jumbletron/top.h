@@ -25,6 +25,7 @@ private slots:
     void openJumbleButtonClicked();
     void openLogWindowButtonClicked();
     void openTemperatureConverterClicked();
+    void openChartDisplayButtonClicked();
     void quitButtonClicked();
 
 private:
@@ -36,6 +37,8 @@ private:
     QPushButton *openJumbleButton;
 
     QPushButton *openLogWindowButton;
+
+    QPushButton *openChartDisplayButton;
 
     QPushButton *quitButton;
 
