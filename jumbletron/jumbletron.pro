@@ -26,6 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    applayout.cpp \
     chart_display.cpp \
         main.cpp \
         jumbletronwindow.cpp \
@@ -34,6 +35,7 @@ SOURCES += \
     top.cpp
 
 HEADERS += \
+    applayout.h \
     chart_display.h \
         jumbletronwindow.h \
     temperatureconverter.h \

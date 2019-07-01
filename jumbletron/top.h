@@ -26,6 +26,7 @@ private slots:
     void openLogWindowButtonClicked();
     void openTemperatureConverterClicked();
     void openChartDisplayButtonClicked();
+    void openAppLayoutButtonClicked();
     void quitButtonClicked();
 
 private:
@@ -39,6 +40,8 @@ private:
     QPushButton *openLogWindowButton;
 
     QPushButton *openChartDisplayButton;
+
+    QPushButton *openAppLayoutButton;
 
     QPushButton *quitButton;
 

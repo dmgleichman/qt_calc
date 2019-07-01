@@ -7,6 +7,7 @@
 #include "jumbletronwindow.h"
 #include "logwindow.h"
 #include "chart_display.h"
+#include "applayout.h"
 #include "top.h"
 
 TopWindow::TopWindow(QWidget *parent)
@@ -19,6 +20,8 @@ TopWindow::TopWindow(QWidget *parent)
     openJumbleButton = new QPushButton("Open Jumble");
     openLogWindowButton = new QPushButton("Open Log Window");
     openChartDisplayButton = new QPushButton("Open Chart Display");
+    openAppLayoutButton = new QPushButton("Open App Layout Test");
+
     quitButton = new QPushButton("Quit");
 
     statusLabel = new QLabel("Status:");
@@ -32,14 +35,19 @@ TopWindow::TopWindow(QWidget *parent)
 
     connect(openChartDisplayButton, SIGNAL(clicked()), this, SLOT(openChartDisplayButtonClicked()));
 
+    connect(openAppLayoutButton, SIGNAL(clicked()), this, SLOT(openAppLayoutButtonClicked()));
+
     connect(quitButton, SIGNAL(clicked()), this, SLOT(quitButtonClicked()));
 
     QGridLayout *mainLayout = new QGridLayout;
+
     mainLayout->addWidget(actionsLabel, 1, 0, 1, 5);
     mainLayout->addWidget(openTemperatureConverterButton, 2, 0, 1, 5);
     mainLayout->addWidget(openJumbleButton, 3, 0, 1, 5);
     mainLayout->addWidget(openLogWindowButton, 4, 0, 1, 5);
     mainLayout->addWidget(openChartDisplayButton, 5, 0, 1, 5);
+    mainLayout->addWidget(openAppLayoutButton, 6, 0 , 1, 5);
+
     mainLayout->addWidget(quitButton, 10, 0, 1, 5);
 
     mainLayout->addWidget(statusLabel, 1, 10, 1, 1);
@@ -85,6 +93,17 @@ void TopWindow::openChartDisplayButtonClicked()
 
     chartDisplayWindow->show();
 }
+
+
+void TopWindow::openAppLayoutButtonClicked()
+{
+    topStatusWindow->appendPlainText("Opening App Layout Test");
+
+    QWidget *appLayoutTest = new AppLayout();
+
+    appLayoutTest->show();
+}
+
 
 void TopWindow::quitButtonClicked()
 {
