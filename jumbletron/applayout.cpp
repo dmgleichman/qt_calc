@@ -17,10 +17,15 @@ AppLayout::AppLayout(QWidget *parent)
     buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok
                                      | QDialogButtonBox::Cancel);
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+//    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+//    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(handleFileExit()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(handleFileExit()));
+
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
+//    QHBoxLayout *mainLayout = new QHBoxLayout;
 
     mainLayout->setMenuBar(menuBar);
     mainLayout->addWidget(horizontalGroupBox);

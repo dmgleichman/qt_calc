@@ -10,6 +10,12 @@
 
 QT_CHARTS_USE_NAMESPACE
 
+QT_BEGIN_NAMESPACE
+class QPushButton;
+class QLabel;
+QT_END_NAMESPACE
+
+
 class ChartDisplay : public QWidget
 {
     Q_OBJECT
@@ -17,8 +23,23 @@ class ChartDisplay : public QWidget
 public:
     ChartDisplay(QWidget *parent = nullptr);
 
+private slots:
+    void makeNewPlot();
+
 private:
+    void displayPlot();
+    void createPlot();
+
     QChartView *chartView;
+
+    QChart *chart;
+
+    QLineSeries *series;
+
+    QLabel *panelNameLabel;
+
+    QPushButton *makeNewPlotButton;
+
 };
 
 
