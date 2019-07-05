@@ -70,7 +70,15 @@ void ChartDisplay::createPlot()
     series->append(3, 0);
     series->append(7, 10);
     series->append(10, 7);
-    *series << QPointF(11, 3) << QPointF(13, 9) << QPointF(17, 1) << QPointF(18, 8) << QPointF(20, 6) << QPointF(22,4);
+    *series << QPointF(11, 3) << QPointF(13, 9) << QPointF(17, 1);
+    *series << QPointF(18, 8) << QPointF(20, 6) << QPointF(22,4);
+
+// obsolete
+//    chart->axisX()->setRange(-1,25);
+//    chart->axisY()->setRange(-1,11);
+
+    chart->axes(Qt::Horizontal).back()->setRange(-1,25);
+    chart->axes(Qt::Vertical).back()->setRange(-1,11);
 
     chart->setTitle("Doug's New Chart");
 
