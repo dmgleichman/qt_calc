@@ -26,6 +26,8 @@ converter
 
 jumbletron
 
+findfiles
+
 ## Widget Gallery
 
 Interesting pages from the docs:
