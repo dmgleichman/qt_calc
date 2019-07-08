@@ -21,6 +21,8 @@ public:
 
 private slots:
     void addToLogWindow();
+    void loadFile();
+    void saveLogToFile();
 
 private:
     QString lineOfText;
@@ -30,6 +32,9 @@ private:
     QLineEdit *messageLineEdit;
 
     QPushButton *enterMessagePushButton;
+    QPushButton *loadFilePushButton;
+    QPushButton *saveToFilePushButton;
+
 
     QPlainTextEdit *plainTextLogWindow;
 
