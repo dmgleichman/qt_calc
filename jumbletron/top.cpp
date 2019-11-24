@@ -8,6 +8,7 @@
 #include "logwindow.h"
 #include "chart_display.h"
 #include "applayout.h"
+#include "udp_client.h"
 #include "top.h"
 
 TopWindow::TopWindow(QWidget *parent)
@@ -21,6 +22,7 @@ TopWindow::TopWindow(QWidget *parent)
     openLogWindowButton = new QPushButton("Open Log Window");
     openChartDisplayButton = new QPushButton("Open Chart Display");
     openAppLayoutButton = new QPushButton("Open App Layout Test");
+    openUdpClientButton = new QPushButton("Open UDP Client");
 
     quitButton = new QPushButton("Quit");
 
@@ -37,6 +39,8 @@ TopWindow::TopWindow(QWidget *parent)
 
     connect(openAppLayoutButton, SIGNAL(clicked()), this, SLOT(openAppLayoutButtonClicked()));
 
+    connect(openUdpClientButton, SIGNAL(clicked()), this, SLOT(openUdpClientButtonClicked()));
+
     connect(quitButton, SIGNAL(clicked()), this, SLOT(quitButtonClicked()));
 
     QGridLayout *mainLayout = new QGridLayout;
@@ -47,6 +51,7 @@ TopWindow::TopWindow(QWidget *parent)
     mainLayout->addWidget(openLogWindowButton, 4, 0, 1, 5);
     mainLayout->addWidget(openChartDisplayButton, 5, 0, 1, 5);
     mainLayout->addWidget(openAppLayoutButton, 6, 0 , 1, 5);
+    mainLayout->addWidget(openUdpClientButton, 7, 0, 1, 5);
 
     mainLayout->addWidget(quitButton, 10, 0, 1, 5);
 
@@ -104,6 +109,14 @@ void TopWindow::openAppLayoutButtonClicked()
     appLayoutTest->show();
 }
 
+void TopWindow::openUdpClientButtonClicked()
+{
+    topStatusWindow->appendPlainText("Opening UDP Client Window");
+
+    QWidget *udpClientTest = new UdpClient();
+
+    udpClientTest->show();
+}
 
 void TopWindow::quitButtonClicked()
 {

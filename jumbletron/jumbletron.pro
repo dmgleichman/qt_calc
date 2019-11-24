@@ -32,7 +32,8 @@ SOURCES += \
         jumbletronwindow.cpp \
     temperatureconverter.cpp \
     logwindow.cpp \
-    top.cpp
+    top.cpp \
+    udp_client.cpp
 
 HEADERS += \
     applayout.h \
@@ -40,7 +41,8 @@ HEADERS += \
         jumbletronwindow.h \
     temperatureconverter.h \
     logwindow.h \
-    top.h
+    top.h \
+    udp_client.h
 
 FORMS += \
     jumbletronwindow.ui
