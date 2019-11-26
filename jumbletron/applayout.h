@@ -27,11 +27,14 @@ signals:
 
 public slots:
        void handleFileExit();
+        void handleNewAction();
 private:
         void createMenu();
         void createHorizontalGroupBox();
         void createGridGroupBox();
         void createFormGroupBox();
+
+
 
         enum { NumGridRows = 3, NumButtons = 4 };
 
@@ -47,7 +50,12 @@ private:
         QDialogButtonBox *buttonBox;
 
         QMenu *fileMenu;
+        QAction *newAction;
         QAction *exitAction;
+
+        QMenu *editMenu;
+        QAction *cutAction;
+        QAction *pasteAction;
 
 };
 

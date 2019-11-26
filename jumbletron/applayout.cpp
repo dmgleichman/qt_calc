@@ -1,4 +1,5 @@
 #include <QtWidgets>
+#include <QDebug>
 
 #include "applayout.h"
 
@@ -46,11 +47,28 @@ void AppLayout::createMenu()
     menuBar = new QMenuBar;
 
     fileMenu = new QMenu(tr("&File"), this);
+    newAction = fileMenu->addAction(tr("&New"));
     exitAction = fileMenu->addAction(tr("E&xit"));
     menuBar->addMenu(fileMenu);
 
+    editMenu = new QMenu(tr("&Edit"), this);
+    cutAction = editMenu->addAction(tr("&Cut"));
+    pasteAction = editMenu->addAction(tr("&Paste"));
+    menuBar->addMenu(editMenu);
+
+    connect(newAction, SIGNAL(triggered()), this, SLOT(handleNewAction()));
     connect(exitAction, SIGNAL(triggered()), this, SLOT(handleFileExit()));
+
+    connect(cutAction, SIGNAL(triggered()), this, SLOT(handleNewAction()));
+    connect(pasteAction, SIGNAL(triggered()), this, SLOT(handleNewAction()));
 }
+
+void AppLayout::handleNewAction()
+{
+    qDebug() << "Menu Item: New Triggered";
+
+}
+
 
 void AppLayout::handleFileExit()
 {
