@@ -8,7 +8,7 @@
 #include <QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
 
-QT_CHARTS_USE_NAMESPACE
+#include <QtWidgets>
 
 QT_BEGIN_NAMESPACE
 class QPushButton;

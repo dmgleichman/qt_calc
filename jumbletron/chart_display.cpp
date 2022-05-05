@@ -6,11 +6,7 @@
 #include <QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
 
-QT_CHARTS_USE_NAMESPACE
-
 #include "chart_display.h"
-
-
 
 ChartDisplay::ChartDisplay(QWidget *parent)
     : QWidget (parent)

@@ -96,8 +96,8 @@ void LogWindow::saveLogToFile()
         return;
 
     QTextStream stream(&file);
-    stream << "This is the log file:" << endl;
+    stream << "This is the log file:" << Qt::endl;
 
-    stream << line << endl;
+    stream << line <<Qt::endl;
 
 }

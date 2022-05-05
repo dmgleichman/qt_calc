@@ -56,7 +56,7 @@ void UdpClient::sendUDPMessage()
     QByteArray txData;
     lineOfText = transmitMessageBox->text();
 
-    txData.append(lineOfText);
+    txData.append(lineOfText.toUtf8());
 
     send(txData);
 
